@@ -39,7 +39,11 @@ int main(void)
 			num1 = num2;
 			num11 = num22;
 			num2 = f_num;
+<<<<<<< HEAD
 			num22 = (f_num1 % 1000000000);
+=======
+			num22 = (f_num2 % 1000000000);
+>>>>>>> 15354834d97be42ef896c347b0ac7b26d4369d17
 		}
 		if (((num1 + num2) < 0) && bool_1 == 1)
 			bool_1 = 0;
