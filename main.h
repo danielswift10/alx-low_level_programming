@@ -1,5 +1,5 @@
-#ifndef FILE_MAIN
-#define FILE_MAIN
+#ifndef main_h
+#define main_h
 
 #include <stdio.h>
 
@@ -8,5 +8,4 @@ int largest_number(int a, int b, int c);
 int convert_day(int month, int day);
 void print_remaining_days(int month, int day, int year);
 
-#endif /* FILE_MAIN */
-
+#endif /* main_h */
