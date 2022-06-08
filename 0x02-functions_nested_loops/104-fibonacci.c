@@ -6,7 +6,7 @@
 int main(void)
 {
 	int i, bool_1, bool_2;
-	long int num1, num2, f_num, f_num1, num11, num22;
+	long int num1, num2, f_num, f_num2, num11, num22;
 
 	num1 = 1;
 	num2 = 2;
@@ -38,7 +38,7 @@ int main(void)
 			num1 = num2;
 			num11 = num22;
 			num2 = f_num;
-			num22 = (f_num2 % 1000000000);
+			num22 = (f_num2 % 1000000000)
 		}
 		if (((num1 + num2) < 0) && bool_1 == 1)
 			bool_1 = 0;
