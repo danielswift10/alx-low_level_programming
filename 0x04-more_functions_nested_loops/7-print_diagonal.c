@@ -20,7 +20,7 @@ void print_diagonal(int n)
 		{
 			for (dl_s = 1; dl_s < dl_c; dl_s++)
 			{
-				_puthcar(' ');
+				_putchar(' ');
 			}
 			_putchar('\\');
 			_putchar('\n');
