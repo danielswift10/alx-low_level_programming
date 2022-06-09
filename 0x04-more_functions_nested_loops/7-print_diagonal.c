@@ -16,9 +16,9 @@ void print_diagonal(int n)
 	}
 	else
 	{
-		for (dl_c = 0; dl_c <= n; dl_c++)
+		for (dl_c = 1; dl_c <= n; dl_c++)
 		{
-			for (dl_s = 0; dl_s < dl_c; dl_s++)
+			for (dl_s = 1; dl_s < dl_c; dl_s++)
 			{
 				_puthcar(' ');
 			}
