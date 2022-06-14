@@ -5,7 +5,7 @@
  * @s: string to be converted to an integer
  * Return: void
  */
-i
+
 int _atoi(char *s)
 {
 	int a;
