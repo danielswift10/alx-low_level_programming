@@ -5,7 +5,7 @@
  * @s: string to be converted to an integer
  * Return: void
  */
-
+i
 int _atoi(char *s)
 {
 	int a;
@@ -13,9 +13,9 @@ int _atoi(char *s)
 
 	b = 0;
 	c = -1;
-	for (a = 0; s[a] != '\0'; ++a)
+	for (a = 0; s[a] != '\0'; a++)
 	{
-		if (s[a] == '_')
+		if (s[a] == '-')
 			c *= -1;
 		if (s[a] > 47 && s[a] < 58)
 		{
