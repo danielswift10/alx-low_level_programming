@@ -13,6 +13,7 @@ char *cap_string(char *str)
 	int k = 32;
 	int separators[] = {',', ';', '.', '?', '"',
 		'(', ')', '{', '}', ' ', '\n', '\t'};
+
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] >= 'a' && str[i] <= 'z')
@@ -22,7 +23,7 @@ char *cap_string(char *str)
 		k = 0;
 		for (j = 0; j <= 12; j++)
 		{
-			if (str[i] == seperators[j])
+			if (str[i] == separators[j])
 			{
 				j = 12;
 				k = 32;
