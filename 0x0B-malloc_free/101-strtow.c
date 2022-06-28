@@ -13,7 +13,7 @@ void ch_free_grid(char **grid, unsigned int height)
 {
 	int i;
 
-	for (i = 0; i < height; ++i)
+	for (i = 0; i <= height; ++i)
 		free(grid[i]);
 	free(grid);
 }
