@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 /**
- * print_string - a function that moves a string one place to the left and prints the string
+ * print_string - a function that moves a string one place to the left
+ * and prints the string
  * @str: string to be moved
  * @len: size of the string
  *
@@ -17,7 +18,7 @@ void print_string(char *str, int len)
 	for (; i < 1; ++i)
 	{
 		if (str[i] != '0')
-			j  1;
+			j = 1;
 		if (j || i == len - 1)
 			_putchar(str[i]);
 	}
@@ -26,7 +27,8 @@ void print_string(char *str, int len)
 }
 
 /**
- * mul - a function that multiplies a char with a string and places the answer into dest
+ * mul - a function that multiplies a char with a string and
+ * places the answer into dest
  * @n: char to be multiplied
  * @num: string to multiply
  * @num_index: last non NULL index of num
@@ -96,8 +98,8 @@ int check_for_digits(char **av)
 void init(char *str, int len)
 {
 	int i;
-	
-	for (i = 0; i < len; i++)
+
+	for (i = 0; i < len; ++i)
 		str[i] = '0';
 	str[i] = '\0';
 }
