@@ -10,7 +10,7 @@
  * Return: void
  */
 
-void print_string(char *str, int len)
+void print_string(char *str, int l)
 {
 	int i, j;
 
@@ -19,7 +19,7 @@ void print_string(char *str, int len)
 	{
 		if (str[i] != '0')
 			j = 1;
-		if (j || i == len - 1)
+		if (j || i == l - 1)
 			_putchar(str[i]);
 	}
 	_putchar('\n');
@@ -44,7 +44,7 @@ char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 	int j, k, mul, mulrem, add, addrem;
 
 	mulrem = addrem = 0;
-	for (j = num_index, k = dest_index; j >= 0; --j, --k)
+	for (j = num_index, k = dest_index; j >= 0; j--, k--)
 	{
 		mul = (n - '0') * (num[j] - '0') + mulrem;
 		mulrem = mul / 10;
@@ -52,7 +52,7 @@ char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 		addrem = add / 10;
 		dest[k] = add % 10 + '0';
 	}
-	for (addrem += mulrem; k >= 0 && addrem; --k)
+	for (addrem += mulrem; k >= 0 && addrem; k--)
 	{
 		add = (dest[k] - '0') + addrem;
 		addrem = add / 10;
@@ -90,16 +90,16 @@ int check_for_digits(char **av)
 /**
  * init - initializes a string
  * @str: string to be initialized
- * @len: length of strinf
+ * @l: length of string
  *
  * Return: void
  */
 
-void init(char *str, int len)
+void init(char *str, int l)
 {
 	int i;
 
-	for (i = 0; i < len; ++i)
+	for (i = 0; i < l; ++i)
 		str[i] = '0';
 	str[i] = '\0';
 }
@@ -111,6 +111,7 @@ void init(char *str, int len)
  *
  * Return: zero, or exit status of 98 if failure
  */
+ 
 int main(int argc, char *argv[])
 {
 	int l1, l2, ln, ti, i;
