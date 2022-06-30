@@ -5,7 +5,7 @@
  * print_string - a function that moves a string one place to the left
  * and prints the string
  * @str: string to be moved
- * @len: size of the string
+ * @l: size of the string
  *
  * Return: void
  */
@@ -111,7 +111,6 @@ void init(char *str, int l)
  *
  * Return: zero, or exit status of 98 if failure
  */
- 
 int main(int argc, char *argv[])
 {
 	int l1, l2, ln, ti, i;
