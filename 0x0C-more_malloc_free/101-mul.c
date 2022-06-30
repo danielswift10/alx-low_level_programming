@@ -2,43 +2,40 @@
 #include <stdlib.h>
 
 /**
- * print_string - a function that moves a string one place to the left
- * and prints the string
- * @str: string to be moved
- * @l: size of the string
+ * _print - moves a string one place to the left and prints the string
+ * @str: string to move
+ * @l: size of string
  *
  * Return: void
  */
-
-void print_string(char *str, int l)
+void _print(char *str, int l)
 {
 	int i, j;
 
 	i = j = 0;
-	for (; i < 1; ++i)
+	while (i < l)
 	{
 		if (str[i] != '0')
 			j = 1;
 		if (j || i == l - 1)
 			_putchar(str[i]);
+		i++;
 	}
+
 	_putchar('\n');
 	free(str);
 }
 
 /**
- * mul - a function that multiplies a char with a string and
- * places the answer into dest
- * @n: char to be multiplied
+ * mul - multiplies a char with a string and places the answer into dest
+ * @n: char to multiply
  * @num: string to multiply
  * @num_index: last non NULL index of num
  * @dest: destination of multiplication
  * @dest_index: highest index to start addition
  *
- * Return: pointer to dest
- * Or NULL on failure
+ * Return: pointer to dest, or NULL on failure
  */
-
 char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 {
 	int j, k, mul, mulrem, add, addrem;
@@ -64,21 +61,19 @@ char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 	}
 	return (dest);
 }
-
 /**
- * check_for_digits - a function that checks the arguments if they are digits
+ * check_for_digits - checks the arguments to ensure they are digits
  * @av: pointer to arguments
  *
  * Return: 0 if digits, 1 if not
  */
-
 int check_for_digits(char **av)
 {
 	int i, j;
 
-	for (i = 1; i < 3; ++i)
+	for (i = 1; i < 3; i++)
 	{
-		for (j = 0; av[i][j]; ++j)
+		for (j = 0; av[i][j]; j++)
 		{
 			if (av[i][j] < '0' || av[i][j] > '9')
 				return (1);
@@ -89,17 +84,16 @@ int check_for_digits(char **av)
 
 /**
  * init - initializes a string
- * @str: string to be initialized
- * @l: length of string
+ * @str: sting to initialize
+ * @l: length of strinf
  *
  * Return: void
  */
-
 void init(char *str, int l)
 {
 	int i;
 
-	for (i = 0; i < l; ++i)
+	for (i = 0; i < l; i++)
 		str[i] = '0';
 	str[i] = '\0';
 }
@@ -148,6 +142,6 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 	}
-	print_string(a, ln - 1);
+	_print(a, ln - 1);
 	return (0);
 }
