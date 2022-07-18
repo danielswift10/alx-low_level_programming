@@ -3,11 +3,14 @@
 /**
  * free_listp - frees a linked list
  * @head: head of a list.
+ *
+ * Return: no return.
  */
 
 void free_listp(listp_t **head)
 {
-	listp_t *temp, *curr;
+	listp_t *temp;
+	listp_t *curr;
 
 	if (head)
 	{
@@ -30,12 +33,10 @@ void free_listp(listp_t **head)
 
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t nodes;
+	size_t nodes = 0;
 	listp_t *hptr, *new, *add;
 
-	nodes = 0;
 	hptr = NULL;
-
 	while (head)
 	{
 		new = malloc(sizeof(listp_t));
@@ -46,6 +47,7 @@ size_t print_listint_safe(const listint_t *head)
 		new->p = (void *)head;
 		new->next = hptr;
 		hptr = new;
+
 		add = hptr;
 
 		while (add->next)
@@ -58,12 +60,12 @@ size_t print_listint_safe(const listint_t *head)
 				return (nodes);
 			}
 		}
+
 		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 		nodes++;
 	}
 
 	free_listp(&hptr);
-
 	return (nodes);
 }
