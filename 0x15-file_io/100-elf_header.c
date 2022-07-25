@@ -4,6 +4,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include "main.h"
 #include <elf.h>
 
 /**
@@ -14,7 +15,9 @@
 
 void print_addr(char *ptr)
 {
-	int i, int begin, char sys;
+	int i;
+	int begin;
+	char sys;
 
 	printf("  Entry point address:               0x");
 	sys = ptr[4] + '0';
@@ -193,7 +196,9 @@ int check_elf(char *ptr)
  */
 int main(int argc, char *argv[])
 {
-	int fd, ret_read, char ptr[27];
+	int fd;
+        int ret_read;
+	char ptr[27];
 
 	if (argc != 2)
 	{
