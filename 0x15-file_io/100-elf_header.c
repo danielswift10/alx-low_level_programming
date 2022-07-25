@@ -197,7 +197,7 @@ int check_elf(char *ptr)
 int main(int argc, char *argv[])
 {
 	int fd;
-        int ret_read;
+	int ret_read;
 	char ptr[27];
 
 	if (argc != 2)
